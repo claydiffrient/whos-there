@@ -1,0 +1,15 @@
+version: '2'
+services:
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile.dev
+    volumes:
+      - "./api:/usr/src/app"
+      - /usr/src/app/node_modules
+    depends_on:
+      - rethinkdb
+  rethinkdb:
+    image: rethinkdb
+    ports:
+      - "8080:8080"
