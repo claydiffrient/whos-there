@@ -8,6 +8,10 @@ const listAllPeople =  (req, res) => {
   });
 };
 
+const listRecentAttendees = (req, res, next) => {
+  next(new Error('Not Implemented'));
+}
+
 const createPerson = (req, res) => {
   const newPerson = new Person({
     name: req.body.name
@@ -35,5 +39,6 @@ const addAttendanceToPerson = (req, res, next) => {
 module.exports = {
   listAllPeople,
   createPerson,
-  addAttendanceToPerson
+  addAttendanceToPerson,
+  listRecentAttendees
 };
