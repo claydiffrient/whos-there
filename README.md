@@ -1,6 +1,8 @@
 Who's There?
 ===================
 
+**WIP:** This project is under active development and is not ready for use.
+
 A semi configurable way to track attendance of members in meetings.
 
 
