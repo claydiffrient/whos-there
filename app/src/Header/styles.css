@@ -1,0 +1,15 @@
+@import '../common.css';
+
+:root {
+  --main: rgba(208, 244, 134, 1);
+}
+
+.Header {
+  margin: 0;
+  background-color: var(--main);
+}
+
+.NavItem {
+  display: inline-block;
+  margin-left: 20px;
+}

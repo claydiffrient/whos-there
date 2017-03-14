@@ -1,3 +1,11 @@
-.root {
-  background-color: green
+@import 'normalize.css';
+@import 'flexboxgrid';
+@import './common.css';
+
+:root {
+  --text: rgb(56, 61, 64);
+}
+
+.Index {
+  color: var(--text);
 }

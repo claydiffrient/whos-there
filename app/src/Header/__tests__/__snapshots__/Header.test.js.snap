@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeopleList renders properly 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-xs-12"
+  >
+    <ul
+      className="Header row"
+    >
+      <li
+        className="NavItem col-xs-2"
+      >
+        <Link
+          replace={false}
+          to="/"
+        >
+          Home
+        </Link>
+      </li>
+      <li
+        className="NavItem col-xs-2"
+      >
+        <Link
+          replace={false}
+          to="/reports"
+        >
+          Reports
+        </Link>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
