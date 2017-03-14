@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PeopleList renders out the names of people 1`] = `
+<ul
+  className="root"
+>
+  <li>
+    Clay
+  </li>
+  <li>
+    Elias
+  </li>
+  <li>
+    Sterling
+  </li>
+  <li>
+    Andy
+  </li>
+</ul>
+`;

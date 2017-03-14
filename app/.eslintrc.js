@@ -4,6 +4,7 @@ module.exports = {
       'import/no-extraneous-dependencies': ['error', {
         devDependencies: true
       }],
-      'comma-dangle': ["error", "only-multiline"]
+      'comma-dangle': ["error", "only-multiline"],
+      "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     }
 };

@@ -26,6 +26,8 @@
     "css-loader": "0.27.1",
     "detect-port": "1.1.0",
     "dotenv": "4.0.0",
+    "enzyme": "^2.7.1",
+    "enzyme-to-json": "^1.5.0",
     "eslint": "^3.15.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-loader": "1.6.3",
@@ -39,14 +41,16 @@
     "fs-extra": "2.0.0",
     "html-webpack-plugin": "2.28.0",
     "http-proxy-middleware": "0.17.4",
+    "identity-obj-proxy": "^3.0.0",
     "inline-manifest-webpack-plugin": "^3.0.1",
-    "jest": "19.0.2",
+    "jest": "^19.0.2",
     "json-loader": "0.5.4",
     "object-assign": "4.1.1",
     "postcss-cssnext": "^2.9.0",
     "postcss-loader": "1.3.3",
     "postcss-smart-import": "^0.6.9",
     "promise": "7.1.1",
+    "react-addons-test-utils": "^15.4.2",
     "react-dev-utils": "^0.5.2",
     "style-loader": "0.13.2",
     "uglify-js": "git://github.com/mishoo/UglifyJS2#harmony",
@@ -69,29 +73,15 @@
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}"
     ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](build|docs|node_modules|scripts)[/\\\\]"
     ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "identity-obj-proxy"
     }
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
   }
 }
