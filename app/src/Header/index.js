@@ -11,6 +11,9 @@ const Header = () => (
           <Link to="/">Home</Link>
         </li>
         <li className={`${styles.NavItem} col-xs-2`}>
+          <Link to="/people">People</Link>
+        </li>
+        <li className={`${styles.NavItem} col-xs-2`}>
           <Link to="/reports">Reports</Link>
         </li>
       </ul>
