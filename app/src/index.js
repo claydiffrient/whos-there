@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import styles from './index.css';
 import Header from './Header';
+import HomePage from './HomePage';
 
 
-const Test = () => (
+const Main = () => (
   <Router>
     <div className={styles.Index}>
       <Header />
-      This is a test
+      <Route exact path="/" component={HomePage} />
     </div>
   </Router>
 );
 
-ReactDOM.render(<Test />, document.getElementById('index_mount'));
+ReactDOM.render(<Main />, document.getElementById('index_mount'));

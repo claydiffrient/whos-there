@@ -12,6 +12,10 @@ module.exports = {
     publicPath: '/',
     filename: '[name].[chunkhash].js',
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 9000,
+  },
   module: {
     rules: [
       {
