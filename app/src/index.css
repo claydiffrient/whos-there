@@ -1,6 +1,6 @@
 @import 'normalize.css';
 @import 'flexboxgrid';
-@import './common.css';
+@import './components/shared/common.css';
 
 :root {
   --text: rgb(56, 61, 64);

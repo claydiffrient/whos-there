@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.css';
+import { peopleList } from '../shared/peopleShape';
 
 /**
  * This component lists the users that will show up for selection.
@@ -13,11 +14,7 @@ const PeopleList = props => (
 );
 
 PeopleList.propTypes = {
-  people: React.PropTypes.arrayOf(
-    React.PropTypes.shape({
-      name: React.PropTypes.string
-    })
-  ).isRequired
+  people: peopleList.isRequired
 };
 
 export default PeopleList;

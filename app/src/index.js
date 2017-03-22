@@ -1,18 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import styles from './index.css';
-import Header from './Header';
-import HomePage from './HomePage';
+import { Provider, connect } from 'react-redux';
 
+import configureStore from './store/configureStore';
+import * as Actions from './actions';
+
+import styles from './index.css';
+import Header from './components/Header';
+import HomePage from './components/HomePage';
+
+const store = configureStore();
+
+const mapStateToProps = state => ({
+  peopleList: state.peopleList
+});
+
+const mapDispatchToProps = dispatch => ({
+  handleAddPerson (person) { dispatch(Actions.addPerson(person)); }
+});
+
+const ConnectedHomePage = connect(mapStateToProps, mapDispatchToProps)(HomePage);
 
 const Main = () => (
   <Router>
     <div className={styles.Index}>
       <Header />
-      <Route exact path="/" component={HomePage} />
+      <Route exact path="/" component={ConnectedHomePage} />
     </div>
   </Router>
 );
 
-ReactDOM.render(<Main />, document.getElementById('index_mount'));
+
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Main />
+  </Provider>
+  , document.getElementById('index_mount')
+);

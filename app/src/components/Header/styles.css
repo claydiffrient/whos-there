@@ -1,4 +1,4 @@
-@import '../common.css';
+@import '../shared/common.css';
 
 :root {
   --main: rgba(208, 244, 134, 1);

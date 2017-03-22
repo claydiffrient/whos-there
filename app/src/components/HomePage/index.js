@@ -1,11 +1,18 @@
 import React from 'react';
 import PeopleList from '../PeopleList';
+import { peopleList } from '../shared/peopleShape';
 
-export default function () {
+export default function HomePage (props) {
   return (
     <div>
       <p>Click (or tap) someone{"'"}s name to mark them as present on today{"'"}s date</p>
-      <PeopleList people={[]} />
+      <PeopleList people={props.peopleList.data} />
     </div>
   );
 }
+
+HomePage.propTypes = {
+  peopleList: React.PropTypes.shape({
+    data: peopleList
+  }).isRequired
+};
