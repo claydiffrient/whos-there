@@ -9,3 +9,5 @@ export const addPerson = createAction('ADD_PERSON', (person) => {
 });
 
 export const removePerson = createAction('REMOVE_PERSON');
+
+export const markPresent = createAction('MARK_PRESENT');

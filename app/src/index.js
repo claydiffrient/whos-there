@@ -17,7 +17,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleAddPerson (person) { dispatch(Actions.addPerson(person)); }
+  handleAddPerson (person) { dispatch(Actions.addPerson(person)); },
+  markPresent (name) { dispatch(Actions.markPresent(name)); }
 });
 
 const ConnectedHomePage = connect(mapStateToProps, mapDispatchToProps)(HomePage);
@@ -30,8 +31,6 @@ const Main = () => (
     </div>
   </Router>
 );
-
-
 
 ReactDOM.render(
   <Provider store={store}>

@@ -8,6 +8,11 @@ const peopleList = handleActions({
     Object.assign({}, state, {
       data: state.data.concat(action.payload)
     })
+  ),
+  [Actions.markPresent]: (state, action) => (
+    Object.assign({}, state, {
+      data: state.data.filter(person => person.name !== action.payload)
+    })
   )
 }, defaultState);
 
