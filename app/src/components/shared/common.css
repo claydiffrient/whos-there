@@ -1,8 +1,8 @@
 :root {
-  --main: rgba(208, 244, 134, 1);
-  --secondary: rgba(176, 208, 110, 1);
-  --text: rgb(56, 61, 64);
-  /*--alert: rgba(8, 147, 152, 1);*/
-  /*$color4: rgba(0, 208, 221, 1);
-  $color5: rgba(85, 102, 47, 1);*/
+  
+}
+
+:global(body) {
+  background-color: var(--body-bg);
+  color: var(--gray-lighter);
 }

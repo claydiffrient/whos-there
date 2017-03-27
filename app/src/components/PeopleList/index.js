@@ -8,7 +8,9 @@ import { peopleList } from '../shared/peopleShape';
 const PeopleList = props => (
   <ul className={styles.root}>
     {props.people.map(p => (
-      <li key={p.name}>{p.name}</li>
+      <li key={p.name}>
+        <button className={styles.personBtn}>{p.name}</button>
+      </li>
     ))}
   </ul>
 );

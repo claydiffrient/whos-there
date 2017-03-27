@@ -1,3 +1,28 @@
+:root {
+  --buttonPadding: calc(var(--padding-base-vertical) * 2) calc(var(--padding-base-horizontal) * 2)
+}
+
 .root {
-  
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.personBtn {
+  width: 100%;
+  border-style: none;
+  margin-top: 10px;
+  background-color: var(--btn-default-bg);
+  text-align: center;
+  padding: var(--buttonPadding);
+  color: var(--btn-primary-color);
+  cursor: pointer;
+}
+
+.personBtn:hover {
+  background-color: color(rgb(78, 93, 108) shade(3%));
+}
+
+.personBtn:focus {
+  background-color: color(rgb(78, 93, 108) shade(3%));
 }
