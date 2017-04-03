@@ -13,6 +13,7 @@
     "redux": "^3.6.0",
     "redux-actions": "^2.0.1",
     "redux-logger": "^2.8.2",
+    "redux-offline": "^1.0.3",
     "redux-thunk": "^2.2.0"
   },
   "devDependencies": {

@@ -13,6 +13,14 @@ const peopleList = handleActions({
     Object.assign({}, state, {
       data: state.data.filter(person => person.name !== action.payload)
     })
+  ),
+  [Actions.markPresentCommit]: state => (
+    Object.assign({}, state) // Do something more official here perhaps?
+  ),
+  [Actions.markPresentRollback]: (state, action) => (
+    Object.assign({}, state, {
+      data: state.data.concat([{ name: action.meta.person }])
+    })
   )
 }, defaultState);
 

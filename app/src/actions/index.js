@@ -10,4 +10,13 @@ export const addPerson = createAction('ADD_PERSON', (person) => {
 
 export const removePerson = createAction('REMOVE_PERSON');
 
-export const markPresent = createAction('MARK_PRESENT');
+export const markPresentCommit = createAction('MARK_PRESENT_COMMIT', null, person => ({ person }));
+export const markPresentRollback = createAction('MARK_PRESENT_ROLLBACK', null, person => ({ person }));
+
+export const markPresent = createAction('MARK_PRESENT', null, person => ({
+  offline: {
+    effect: { url: '/api/present', method: 'POST', body: { person, date: new Date() } },
+    commit: markPresentCommit(person),
+    rollback: markPresentRollback(person)
+  }
+}));
