@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Provider, connect } from 'react-redux';
@@ -23,14 +23,22 @@ const mapDispatchToProps = dispatch => ({
 
 const ConnectedHomePage = connect(mapStateToProps, mapDispatchToProps)(HomePage);
 
-const Main = () => (
-  <Router>
-    <div className={styles.Index}>
-      <Header />
-      <Route exact path="/" component={ConnectedHomePage} />
-    </div>
-  </Router>
-);
+class Main extends Component {
+  componentDidMount () {
+    store.dispatch(Actions.getPeople());
+  }
+
+  render () {
+    return (
+      <Router>
+        <div className={styles.Index}>
+          <Header />
+          <Route exact path="/" component={ConnectedHomePage} />
+        </div>
+      </Router>
+    );
+  }
+}
 
 ReactDOM.render(
   <Provider store={store}>

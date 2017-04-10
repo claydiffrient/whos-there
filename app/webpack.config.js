@@ -13,9 +13,15 @@ module.exports = {
     filename: '[name].js',
   },
   devServer: {
-    // contentBase: path.join(__dirname, 'dist'),
     port: 9000,
-    historyApiFallback: true
+    historyApiFallback: true,
+    proxy: {
+      '**': {
+        target: 'http://localhost:3000',
+        changeOrigin: true,
+        pathRewrite: { '^/api/': '' }
+      }
+    }
   },
   module: {
     rules: [

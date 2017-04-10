@@ -21,6 +21,11 @@ const peopleList = handleActions({
     Object.assign({}, state, {
       data: state.data.concat([{ name: action.meta.person }])
     })
+  ),
+  [Actions.getPeopleCommit]: (state, action) => (
+    Object.assign({}, state, {
+      data: state.data.concat(action.payload)
+    })
   )
 }, defaultState);
 

@@ -1,0 +1,45 @@
+{
+  "meetings": [
+    {
+      "id": 1,
+      "date": "2017-04-02",
+      "attendees": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "date": "2017-04-09",
+      "attendees": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "persons": [
+    {
+      "id": 1,
+      "name": "Clay Diffrient"
+    },
+    {
+      "id": 2,
+      "name": "Elias Doty"
+    },
+    {
+      "id": 3,
+      "name": "Sterling Davis"
+    },
+    {
+      "id": 4,
+      "name": "Bryce Larsen"
+    },
+    {
+      "id": 5,
+      "name": "Mark Hatch"
+    }
+  ]
+}
